@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".FirstFragment">
+
+    <ScrollView
+        tools:context="com.example.trip4u.fragments.startScreens.HomePageFragment"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/image"
+        android:layout_width="531dp"
+        android:layout_height="192dp"
+        android:src="@drawable/rect1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/trip4u"
+        android:layout_width="100dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/trip4u2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/image" />
+
+    <Button
+        android:id="@+id/new_trip_button"
+        android:layout_width="270dp"
+        android:layout_height="51dp"
+        android:background="@drawable/bg_for_google_and_facebook"
+        android:text="Create a new trip"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:onClick="@{()->HomePageFragment.createTripClicked()}"
+        app:layout_constraintTop_toTopOf="@+id/image"
+        android:layout_marginTop="170dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/trip1"
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.103"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/new_trip_button"
+        android:paddingBottom="10dp">
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:src="@drawable/london"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/airport_name1"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Heathrow Airport"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintTop_toBottomOf="@id/imageView1"
+            android:layout_marginTop="10dp"
+            app:layout_constrainedWidth="true" />
+
+        <TextView
+            android:id="@+id/hotel_name1"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="King Solomon Hotel"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintTop_toBottomOf="@id/airport_name1"
+            app:layout_constrainedWidth="true" />
+
+        <TextView
+            android:id="@+id/total_cost1"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="$100"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintTop_toBottomOf="@id/hotel_name1"
+            app:layout_constrainedWidth="true" />
+
+        <Button
+            android:id="@+id/details_button1"
+            android:layout_width="70dp"
+            android:layout_height="17dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_for_google_and_facebook"
+            android:text="more details"
+            android:gravity="center"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="9sp"
+            app:layout_constraintTop_toBottomOf="@id/total_cost1"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="13dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/trip2"
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/trip1"
+        app:layout_constraintTop_toTopOf="@id/trip1"
+        android:paddingBottom="10dp">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:src="@drawable/newyork"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/airport_name2"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Heathrow Airport"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintTop_toBottomOf="@id/imageView2"
+            android:layout_marginTop="10dp"
+            app:layout_constrainedWidth="true" />
+
+        <TextView
+            android:id="@+id/hotel_name2"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="King Solomon Hotel"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintTop_toBottomOf="@id/airport_name2"
+            app:layout_constrainedWidth="true" />
+
+        <TextView
+            android:id="@+id/total_cost2"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="$200"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintTop_toBottomOf="@id/hotel_name2"
+            app:layout_constrainedWidth="true" />
+
+        <Button
+            android:id="@+id/details_button2"
+            android:layout_width="70dp"
+            android:layout_height="17dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_for_google_and_facebook"
+            android:text="more details"
+            android:gravity="center"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="9sp"
+            app:layout_constraintTop_toBottomOf="@id/total_cost2"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="13dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/trip3"
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="@id/trip1"
+        app:layout_constraintTop_toBottomOf="@id/trip1"
+        android:layout_marginTop="25dp"
+        android:paddingBottom="10dp">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:src="@drawable/roma"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/airport_name3"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Heathrow Airport"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintTop_toBottomOf="@id/imageView3"
+            android:layout_marginTop="10dp"
+            app:layout_constrainedWidth="true" />
+
+        <TextView
+            android:id="@+id/hotel_name3"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="King Solomon Hotel"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintTop_toBottomOf="@id/airport_name3"
+            app:layout_constrainedWidth="true" />
+
+        <TextView
+            android:id="@+id/total_cost3"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="$150"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintTop_toBottomOf="@id/hotel_name3"
+            app:layout_constrainedWidth="true" />
+
+        <Button
+            android:id="@+id/details_button3"
+            android:layout_width="70dp"
+            android:layout_height="17dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_for_google_and_facebook"
+            android:text="more details"
+            android:gravity="center"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="9sp"
+            app:layout_constraintTop_toBottomOf="@id/total_cost3"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="13dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/trip4"
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintStart_toEndOf="@id/trip3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/trip2"
+        android:layout_marginTop="25dp"
+        android:paddingBottom="10dp">
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:src="@drawable/hungary"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/airport_name4"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Heathrow Airport"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintTop_toBottomOf="@id/imageView4"
+            android:layout_marginTop="10dp"
+            app:layout_constrainedWidth="true" />
+
+        <TextView
+            android:id="@+id/hotel_name4"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="King Solomon Hotel"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintTop_toBottomOf="@id/airport_name4"
+            app:layout_constrainedWidth="true" />
+
+        <TextView
+            android:id="@+id/total_cost4"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="$220"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintTop_toBottomOf="@id/hotel_name4"
+            app:layout_constrainedWidth="true" />
+
+        <Button
+            android:id="@+id/details_button4"
+            android:layout_width="70dp"
+            android:layout_height="17dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_for_google_and_facebook"
+            android:text="more details"
+            android:gravity="center"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="9sp"
+            app:layout_constraintTop_toBottomOf="@id/total_cost4"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="13dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</FrameLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:title="Home"
+        android:icon="@drawable/ic_home" />
+
+    <item
+        android:id="@+id/favorite"
+        android:title="Favorite"
+        android:icon="@drawable/ic_heart"/>
+
+    <item
+        android:id="@+id/current"
+        android:title="Current"
+        android:icon="@drawable/ic_pin" />
+
+    <item
+        android:id="@+id/backup"
+        android:title="Backup"
+        android:icon="@drawable/ic_cloud"/>
+
+    <item
+        android:id="@+id/person"
+        android:title="Person"
+        android:icon="@drawable/ic_person"/>
+
+</menu>
